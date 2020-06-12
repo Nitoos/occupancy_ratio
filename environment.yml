@@ -1,0 +1,11 @@
+name: venv
+channels:
+  - conda-forge
+dependencies:
+  - python
+  - influxdb
+  - tensorflow
+  - numpy
+  - Pillow
+  - opencv
+  - seaborn
