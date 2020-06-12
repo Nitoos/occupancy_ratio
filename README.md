@@ -1,4 +1,4 @@
-# Occupancy Ratio of a Meeting Room.
+# Occupancy Ratio of a Meeting Room
 Occupancy ratio of a meeting room is calculated by Yolo v3 algorithm that uses deep convolutional neural networks to detect Chair and People in the room and calculate its ratio. <br> <br>
 
 ## Getting started
@@ -11,6 +11,14 @@ This project also needs anaconda, grafana, web browser, influxdb server and was 
 For Windows:
 You can refer anaconda installation on the official web page by clicking [here](https://docs.anaconda.com/anaconda/install/windows/) .
 
+### Running InfluxDB
+For Windows:
+1. You can directly click [here](https://dl.influxdata.com/influxdb/releases/influxdb-1.8.0_windows_amd64.zip) for direct download.
+
+2. Double click the influxd.exe inside the extracted folder. This influxdb server should be running on the background while testing this application.
+
+You can refer InfluxDB installation on the official web page by clicking [here](https://portal.influxdata.com/downloads/) .
+
 ### Grafana Installation
 For Windows:
 1. You can refer grafana installation on the official web page by clicking [here](https://grafana.com/docs/grafana/latest/installation/windows/) .
@@ -19,18 +27,18 @@ For Windows:
 ```
 http://localhost:3000/
 ```
-3. On the dashboard click on `+` and click on `import`.
+3. Click on `Configration` in the dashboard and select `Data Source` and select `InfluxDB`, give the following details and click on `Save and Test` button.
+```
+Name = Influxdb
+HTTP
+	URL='http://localhost:8086'
+	Access=default
+InfluxDB Details
+	Database='detection'
+```
+4. On the dashboard click on `+` and click on `import`.
 
-4. Copy paste the content from `./grafana/dashboard.json` file to the `Import via panel json` and click on `Load`
-
-
-### Running InfluxDB
-For Windows:
-1. You can directly click [here](https://dl.influxdata.com/influxdb/releases/influxdb-1.8.0_windows_amd64.zip) for direct download.
-
-2. Double click the influxd.exe inside the extracted folder. This influxdb server should be running on the background while testing this application.
-
-You can refer InfluxDB installation on the official web page by clicking [here](https://portal.influxdata.com/downloads/) .
+5. Copy paste the content from `./grafana/dashboard.json` file to the `Import via panel json` and click on `Load`
 
 ### Installing Python Prerequisites
 1. Navigate to the "Anaconda Prompt (anaconda3)" in the startup menu and double click the shell command prompt.
