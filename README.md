@@ -30,7 +30,7 @@ For Windows:
 
 2. Double click the influxd.exe inside the extracted folder. This influxdb server should be running on the background while testing this application.
 
-You can refer InfluxDB installation on the official web page by clicking [here](https://docs.anaconda.com/anaconda/install/windows/) .
+You can refer InfluxDB installation on the official web page by clicking [here](https://portal.influxdata.com/downloads/) .
 
 ### Installing Python Prerequisites
 1. Navigate to the "Anaconda Prompt (anaconda3)" in the startup menu and double click the shell command prompt.
@@ -85,7 +85,7 @@ Once the execution is completed exit the virtual enviroment with the following c
 ```
 conda deactivate venv
 ```
-If the Aapplication is not going to be executed again execute the below command to remove the virtual environment.
+If the Application is not going to be executed again execute the below command to remove the virtual environment.
 ```
 conda env remove -n venv -y
 ```
@@ -93,7 +93,7 @@ conda env remove -n venv -y
 ## Note
 1. Grafana and influxdb servers should be running while executing the detect.py file.
 
-2. Press `q` anytome duing the video detection to stop the process.
+2. Press `q` anytime duing the video detection to stop the process.
 
 ## Acknowledgments
 * [Yolo v3 official paper](https://arxiv.org/abs/1804.02767)
